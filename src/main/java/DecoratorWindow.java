@@ -1,12 +1,7 @@
 public abstract class DecoratorWindow implements Window {
-    private final Window window;
+    protected Window windowDecorated;
 
-    public DecoratorWindow (Window windowToBeDecorated) {
-        this.window = windowToBeDecorated;
-    }
-
-    @Override
-    public void draw() {
-        this.window.draw();
+    public DecoratorWindow(Window windowDecorated) {
+        this.windowDecorated = windowDecorated;
     }
 }

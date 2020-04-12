@@ -1,11 +1,11 @@
 public class CloseableWindow extends DecoratorWindow {
-    public CloseableWindow(Window windowToBeDecorated) {
-        super(windowToBeDecorated);
+    public CloseableWindow(Window windowDecorated) {
+        super(windowDecorated);
     }
 
     @Override
     public void draw(){
-        super.draw();
+        windowDecorated.draw();
         System.out.println("Close Window");
     }
 }
